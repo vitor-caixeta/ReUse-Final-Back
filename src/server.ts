@@ -18,7 +18,8 @@ const getErrorMessage = (e: unknown) =>
 // CORS
 app.use(
   cors({
-    origin: (process.env.CORS_ORIGIN?.split(",") ?? ["http://localhost:3000"]),
+    // origin: (process.env.CORS_ORIGIN?.split(",") ?? ["http://localhost:3000"]),
+    origin: (process.env.CORS_ORIGIN?.split(",") ?? ["https://reusefinal.vercel.app"]),
     credentials: true,
   })
 );

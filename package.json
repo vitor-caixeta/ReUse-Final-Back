@@ -9,6 +9,7 @@
     "start": "node dist/server.js",
     "build": "tsc -p tsconfig.json",
     "postinstall": "prisma generate",
+    "migrate": "prisma migrate deploy",
     "seed": "ts-node prisma/seed.ts",
     "server:dev": "tsx watch src/server.ts",
     "server:start": "node --enable-source-maps dist/server.js"
