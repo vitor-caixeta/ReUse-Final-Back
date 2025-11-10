@@ -9,6 +9,13 @@ import { auth } from "./middleware/auth";
 
 dotenv.config();
 
+const redact = (s?: string) =>
+  s ? s.replace(/(postgresql:\/\/[^:]+:)[^@]+(@)/, "$1***$2") : s;
+
+console.log("DATABASE_URL:", redact(process.env.DATABASE_URL));
+console.log("DIRECT_URL:", redact(process.env.DIRECT_URL));
+
+
 const app = express();
 const prisma = new PrismaClient();
 
