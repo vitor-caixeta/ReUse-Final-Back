@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev src/server.ts",
     "start": "node dist/server.js",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "postinstall": "prisma generate",
     "seed": "ts-node prisma/seed.ts",
     "server:dev": "tsx watch src/server.ts",
